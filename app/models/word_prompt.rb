@@ -1,0 +1,2 @@
+class WordPrompt < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class WordPromptsController < ApplicationController
+end

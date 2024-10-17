@@ -1,0 +1,60 @@
+# This file should ensure the existence of records required to run the application in every environment (production,
+# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Example:
+#
+#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
+#     MovieGenre.find_or_create_by!(name: genre_name)
+#   end
+
+WordPrompt.create(prompt: 'Dog')
+WordPrompt.create(prompt: 'Cat')
+WordPrompt.create(prompt: 'House')
+WordPrompt.create(prompt: 'Frog')
+WordPrompt.create(prompt: 'Unicorn')
+WordPrompt.create(prompt: 'Elephant')
+WordPrompt.create(prompt: 'Sloth')
+WordPrompt.create(prompt: 'Car')
+WordPrompt.create(prompt: 'Motorcycle')
+WordPrompt.create(prompt: 'Bicycle')
+WordPrompt.create(prompt: 'Truck')
+WordPrompt.create(prompt: 'Ambulance')
+WordPrompt.create(prompt: 'Sun Glasses')
+WordPrompt.create(prompt: 'Hands')
+WordPrompt.create(prompt: 'Jacket')
+WordPrompt.create(prompt: 'Computer')
+WordPrompt.create(prompt: 'Television')
+WordPrompt.create(prompt: 'Table')
+WordPrompt.create(prompt: 'Chair')
+WordPrompt.create(prompt: 'Ice Cream')
+WordPrompt.create(prompt: 'Pizza')
+WordPrompt.create(prompt: 'Taco')
+WordPrompt.create(prompt: 'Hamburger')
+WordPrompt.create(prompt: 'Pasta')
+WordPrompt.create(prompt: 'Salad')
+WordPrompt.create(prompt: 'Cookie')
+WordPrompt.create(prompt: 'Toilet')
+WordPrompt.create(prompt: 'Sink')
+WordPrompt.create(prompt: 'Tree')
+WordPrompt.create(prompt: 'Mushroom')
+WordPrompt.create(prompt: 'Lamp')
+WordPrompt.create(prompt: 'Coffee Maker')
+WordPrompt.create(prompt: 'Desk')
+WordPrompt.create(prompt: 'Scooter')
+WordPrompt.create(prompt: 'Phone')
+WordPrompt.create(prompt: 'Homework')
+WordPrompt.create(prompt: 'Drawing')
+WordPrompt.create(prompt: 'Painting')
+WordPrompt.create(prompt: 'Running')
+WordPrompt.create(prompt: 'Laughing')
+WordPrompt.create(prompt: 'Crying')
+WordPrompt.create(prompt: 'Swimming')
+WordPrompt.create(prompt: 'Chasing')
+WordPrompt.create(prompt: 'Sitting')
+WordPrompt.create(prompt: 'Drooling')
+WordPrompt.create(prompt: 'Armpit')
+WordPrompt.create(prompt: 'Nose')
+WordPrompt.create(prompt: 'Face')
+
+# Add more prompts as needed
