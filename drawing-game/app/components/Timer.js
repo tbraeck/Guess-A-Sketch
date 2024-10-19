@@ -10,5 +10,5 @@ export default function Timer({ duration }) {
     return () => clearTimeout(timerId);
   }, [timeLeft]);
 
-  return <div>Time Left: {timeLeft}s</div>;
+  return <div>Time Left: {timeLeft} </div>;
 }

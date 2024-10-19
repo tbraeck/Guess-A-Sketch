@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
-const DrawingCanvas = () => {
+const DrawingCanvas = ({ onSave }) => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [guess, setGuess] = useState('');
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -42,13 +43,34 @@ const DrawingCanvas = () => {
     };
   }, [isDrawing]);
 
+  const handleSave = () => {
+    const canvas = canvasRef.current;
+    const dataUrl = canvas.toDataURL();
+    onSave(dataUrl);
+  };
+
+  // Function to use the Web Speech API for voice output
+  const speakGuess = (text) => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(utterance);
+  };
+
+  useEffect(() => {
+    if (guess) {
+      speakGuess(guess); // Speak the guess when it changes
+    }
+  }, [guess]);
+
   return (
-    <canvas
-      ref={canvasRef}
-      width={600}
-      height={400}
-      style={{ border: '1px solid black' }}
-    ></canvas>
+    <div>
+      <canvas
+        ref={canvasRef}
+        width={600}
+        height={400}
+        style={{ border: '1px solid black' }}
+      ></canvas>
+      <button onClick={handleSave}>Submit Drawing</button>
+    </div>
   );
 };
 
